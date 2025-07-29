@@ -1,0 +1,79 @@
+<div class="register-container">
+  <h2 class="title-center">Register</h2>
+
+  <!-- Step indicator -->
+  <mat-stepper [linear]="true" [(selectedIndex)]="step" labelPosition="bottom">
+    <mat-step [stepControl]="step1" label="Account Info">
+      <form [formGroup]="step1">
+        <mat-form-field appearance="outline" floatLabel="always" class="full-width">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" required />
+          <mat-error *ngIf="step1.get('name')?.hasError('required')">Name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel="always" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" required />
+          <mat-error *ngIf="step1.get('email')?.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf="step1.get('email')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel="always" class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" required />
+          <mat-error *ngIf="step1.get('password')?.hasError('required')">Password is required</mat-error>
+          <mat-error *ngIf="step1.get('password')?.hasError('minlength')">Minimum 6 characters</mat-error>
+        </mat-form-field>
+
+        <div class="actions">
+          <button mat-raised-button color="primary" (click)="nextStep()" [disabled]="step1.invalid">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="step2" label="Profile">
+      <form [formGroup]="step2">
+        <mat-form-field appearance="outline" floatLabel="always" class="full-width">
+          <mat-label>Bio</mat-label>
+          <textarea matInput formControlName="bio"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel="always" class="full-width">
+          <mat-label>Avatar URL</mat-label>
+          <input matInput formControlName="avatarUrl" />
+        </mat-form-field>
+
+        <div class="actions">
+          <button mat-button (click)="prevStep()">Back</button>
+          <button mat-raised-button color="primary" (click)="nextStep()">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+<mat-step [stepControl]="step3" label="Competences">
+  <form [formGroup]="step3">
+
+
+
+
+
+    <div class="actions">
+      <button mat-button (click)="prevStep()">Back</button>
+      <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="registerForm.invalid">
+        Register
+      </button>
+    </div>
+  </form>
+</mat-step>
+
+
+  </mat-stepper>
+
+  <!-- Already have an account -->
+  <div class="login-section">
+    <span class="login-text">Already have an account?</span>
+    <a class="login-link" routerLink="/login">Login</a>
+  </div>
+
+</div>

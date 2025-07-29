@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+  <div class="container-fluid px-3 px-md-4 w-100">
+
+    <!-- Top Row (mobile and desktop) -->
+    <div class="d-flex justify-content-between align-items-center ">
+
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold text-primary-emphasis mb-0" style="color:#391055;">Logo</a>
+
+      <!-- Profile icons (center in mobile) -->
+      <div class="profile d-flex gap-4 align-items-center d-lg-none">
+        <i class="fas fa-bell text-muted fs-5"></i>
+        <i class="fas fa-envelope text-muted fs-5"></i>
+        <i routerLink="/login" class="fas fa-user-circle text-muted fs-5"></i>
+      </div>
+
+      <!-- Toggler for mobile -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    </div>
+
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse mt-3 mt-lg-0" id="mainNavbar">
+      <div class="d-flex flex-column flex-lg-row w-100 align-items-lg-center justify-content-between gap-3">
+
+        <!-- Search bar -->
+        <form class="flex-grow-1 d-flex justify-content-center" role="search">
+          <div class="input-group w-100" style="max-width: 600px !important;">
+            <span class="input-group-text bg-light border-0"><i class="fas fa-search text-muted"></i></span>
+            <input class="form-control bg-light border-0" type="search" placeholder="Search..." aria-label="Search">
+          </div>
+        </form>
+
+        <!-- Navigation links -->
+        <ul class="navbar-nav w-100 w-lg-auto flex-column flex-lg-row text-center align-items-center gap-3 mt-3 mt-lg-0">
+          <li class="nav-item w-100 w-lg-auto">
+            <a routerLink="/dashboard" class="nav-link text-muted" href="#"><i class="fas fa-folder-open me-1"></i>Projects</a>
+          </li>
+          <li class="nav-item w-100 w-lg-auto">
+            <a class="nav-link text-muted" href="#"><i class="fas fa-award me-1"></i>Badges</a>
+          </li>
+          <i  *ngIf="login" (click)="logout()" class="fas fa-sign-out-alt text-muted fs-5 d-lg-none" title="Logout"></i>
+
+        </ul>
+
+        <!-- Profile icons (desktop only) -->
+        <div  *ngIf="login" class=" d-none d-lg-flex justify-content-end align-items-center gap-3">
+          <i class="fas fa-bell text-muted fs-5"></i>
+          <i class="fas fa-envelope text-muted fs-5"></i>
+          <i  routerLink="/profile" class="fas fa-user-circle text-muted fs-5"></i>
+          <i  *ngIf="login" (click)="logout()" class="fas fa-sign-out-alt text-muted fs-5 d-sm-none d-lg-flex" title="Logout"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

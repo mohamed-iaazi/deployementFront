@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions - Qustion-Plus</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/ask.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <button class="menu-button"><i class="fas fa-bars"></i></button>
+            <div class="logo">
+                <a href="index.html">Qustion-Plus</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="nav-item"><i class="fas fa-trophy"></i> Badges</a>
+            <a href="#" class="nav-item"><i class="fas fa-book"></i> Cours</a>
+            <a href="#" class="nav-item"><i class="fas fa-project-diagram"></i> Projets</a>
+            <a href="#" class="nav-item"><i class="fas fa-bell"></i></a>
+            <a href="#" class="nav-item"><i class="fas fa-envelope"></i></a>
+            <a href="#" class="nav-item profile">
+                <img src="https://placehold.co/400" alt="Profile">
+            </a>
+        </div>
+    </nav>
+    <div class="mobile-overlay"></div>
+    <main class="container">
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+                <a href="question.html" class="active"><i class="fas fa-question-circle"></i> Questions</a>
+                <a href="#"><i class="fas fa-tags"></i> Tags</a>
+                <a href="#"><i class="fas fa-users"></i> Utilisateurs</a>
+                <a href="#"><i class="fas fa-book"></i> Cours</a>
+                <a href="#"><i class="fas fa-project-diagram"></i> Projets</a>
+            </div>
+        </aside>
+        <div class="content">
+            <div class="ask-container">
+                <h1>Questions</h1>
+                <div class="questions-list">
+                    <div class="question-row">
+                        <div class="question-stats">
+                            <div class="stat votes"><span>8</span><div>votes</div></div>
+                            <div class="stat answers answered"><span>2</span><div>answers</div></div>
+                            <div class="stat views"><span>120</span><div>views</div></div>
+                        </div>
+                        <div class="question-summary">
+                            <a href="read.html" class="question-title">Comment déboguer une erreur JWT ?</a>
+                            <div class="question-excerpt">J'obtiens une erreur lors de la vérification de mon token JWT. Comment puis-je résoudre ce problème ?</div>
+                            <div class="question-tags">
+                                <span class="tag">jwt</span>
+                                <span class="tag">authentification</span>
+                                <span class="tag">node.js</span>
+                            </div>
+                        </div>
+                        <div class="question-meta">
+                            <span>Ali</span><br>
+                            <span class="meta-time">il y a 2h</span>
+                        </div>
+                    </div>
+                    <div class="question-row">
+                        <div class="question-stats">
+                            <div class="stat votes"><span>12</span><div>votes</div></div>
+                            <div class="stat answers"><span>4</span><div>answers</div></div>
+                            <div class="stat views"><span>210</span><div>views</div></div>
+                        </div>
+                        <div class="question-summary">
+                            <a href="read.html" class="question-title">Meilleures pratiques JWT</a>
+                            <div class="question-excerpt">Quelles sont les meilleures pratiques pour sécuriser les tokens JWT dans une application Node.js ?</div>
+                            <div class="question-tags">
+                                <span class="tag">jwt</span>
+                                <span class="tag">sécurité</span>
+                            </div>
+                        </div>
+                        <div class="question-meta">
+                            <span>Sara</span><br>
+                            <span class="meta-time">il y a 5h</span>
+                        </div>
+                    </div>
+                    <div class="question-row">
+                        <div class="question-stats">
+                            <div class="stat votes"><span>3</span><div>votes</div></div>
+                            <div class="stat answers"><span>0</span><div>answers</div></div>
+                            <div class="stat views"><span>45</span><div>views</div></div>
+                        </div>
+                        <div class="question-summary">
+                            <a href="read.html" class="question-title">Erreur lors de la connexion à MongoDB</a>
+                            <div class="question-excerpt">Je n'arrive pas à connecter mon application à MongoDB. Voici le message d'erreur reçu...</div>
+                            <div class="question-tags">
+                                <span class="tag">mongodb</span>
+                                <span class="tag">base de données</span>
+                            </div>
+                        </div>
+                        <div class="question-meta">
+                            <span>Yassine</span><br>
+                            <span class="meta-time">il y a 1j</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ask-link">
+                    <a href="ask.html" class="btn-primary">Poser une question</a>
+                </div>
+            </div>
+        </div>
+        <aside class="right-sidebar">
+            <div class="tips-card">
+                <h3>Conseils pour poser une question</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Soyez clair et précis</li>
+                    <li><i class="fas fa-check-circle"></i> Ajoutez des tags pertinents</li>
+                    <li><i class="fas fa-check-circle"></i> Décrivez ce que vous avez déjà essayé</li>
+                </ul>
+            </div>
+            <div class="trending-tags">
+                <h3>Tags populaires</h3>
+                <div class="tag-cloud">
+                    <span class="tag">javascript</span>
+                    <span class="tag">node.js</span>
+                    <span class="tag">jwt</span>
+                    <span class="tag">mongodb</span>
+                    <span class="tag">sécurité</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html> 

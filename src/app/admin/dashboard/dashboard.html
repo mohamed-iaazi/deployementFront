@@ -1,0 +1,32 @@
+<div class="dashboard-container">
+  <!-- Sidebar -->
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav">
+      <div class="logo">AdminPanel</div>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/admin/overview" routerLinkActive="active"><mat-icon>dashboard</mat-icon> Overview</a>
+        <a mat-list-item routerLink="/admin/users" routerLinkActive="active"><mat-icon>group</mat-icon> Users</a>
+        <a mat-list-item routerLink="/admin/events" routerLinkActive="active"><mat-icon>event</mat-icon> Events</a>
+        <a mat-list-item routerLink="/admin/settings" routerLinkActive="active"><mat-icon>settings</mat-icon> Settings</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <!-- Main Content -->
+    <mat-sidenav-content class="main-content">
+      <mat-toolbar color="primary" class="toolbar">
+        <button mat-icon-button (click)="sidenav.toggle()" class="hide-on-desktop">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="title">Admin Dashboard</span>
+        <span class="spacer"></span>
+        <button mat-icon-button><mat-icon>notifications</mat-icon></button>
+        <button mat-icon-button><mat-icon>account_circle</mat-icon></button>
+        <button mat-icon-button (click)="logout()" matTooltip="Logout"><mat-icon>logout</mat-icon></button>
+      </mat-toolbar>
+
+      <div class="page-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

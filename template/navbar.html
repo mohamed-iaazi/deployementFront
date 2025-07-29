@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <link rel="stylesheet" href="styles/navbarstyle.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="first-side">
+      <i class="fas fa-bars menu-toggle" id="menuToggle" onclick="openMenu()"></i> <!-- Menu toggle -->
+      <a class="logo" href="#">Logo</a>
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <label>
+          <input type="text" placeholder="Search..">
+        </label>
+      </div>
+      <ul id="nav-links">
+        <li><i class="fas fa-award"></i><a href="#">Badges</a></li>
+        <li><i class="fas fa-folder-open"></i><a href="#">Projects</a></li>
+      </ul>
+    </div>
+
+    <div class="profile">
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-envelope"></i>
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </nav>
+</header>
+
+<script src="js/navbar.js"></script>
+</body>
+</html>

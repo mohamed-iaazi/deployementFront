@@ -1,0 +1,281 @@
+.navbar {
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem 0.5rem;
+}
+
+.nav-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.logo a {
+    color: #0B1D51;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.search-bar {
+    order: 2;
+    flex: 1;
+    max-width: 300px;
+    margin: 0 0 0 1rem;
+    display: flex;
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    color: #0B1D51;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-item {
+    color: #0B1D51;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.nav-item:hover {
+    color: #725CAD;
+}
+
+.nav-item.active {
+    color: #725CAD;
+}
+
+.nav-item.profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #FFE3A9;
+}
+
+/* Mobile Menu Button */
+.menu-button {
+    display: block;
+    order: 0;
+    margin-right: 0.5rem;
+    background: none;
+    border: none;
+    color: #0B1D51;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: opacity 0.2s;
+}
+
+.mobile-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .search-bar {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-right {
+        display: none !important;
+    }
+    .navbar {
+        padding: 0.75rem 0.5rem;
+    }
+    .search-bar {
+        max-width: 200px;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .logo a {
+        font-size: 1.25rem;
+    }
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #6a737c;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 16px;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e3e6e8;
+}
+
+.mobile-menu .nav-item:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu .nav-item i {
+    width: 24px;
+    margin-right: 12px;
+}
+
+/* Mobile Search Bar */
+.mobile-search {
+    display: none;
+    padding: 8px 16px;
+    background: white;
+    border-bottom: 1px solid #e3e6e8;
+}
+
+.mobile-search.active {
+    display: block;
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .nav-item:hover {
+        background: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .navbar {
+        border-bottom: 2px solid #000;
+    }
+
+    .search-bar {
+        border: 2px solid #000;
+    }
+
+    .nav-item {
+        border: 1px solid #000;
+    }
+}
+
+/* Sidebar as mobile menu */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -220px;
+        width: 200px;
+        height: 100vh;
+        background: #fff;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+        z-index: 1000;
+        transition: left 0.3s;
+        display: block;
+        padding-top: 70px;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+}
+
+/* Hide sidebar by default on mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .sidebar.active {
+        display: block;
+    }
+}
+
+/* Adjust nav-left for hamburger */
+@media (max-width: 768px) {
+    .nav-left {
+        gap: 1rem;
+    }
+}
+
+.logo {
+    order: 1;
+    flex: 0 0 auto;
+}
+
+
+
+
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poser une Question - Qustion-Plus</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/ask.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar (Same as index.html) -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <button class="menu-button"><i class="fas fa-bars"></i></button>
+            <div class="logo">
+                <a href="index.html">Qustion-Plus</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="nav-item"><i class="fas fa-trophy"></i> Badges</a>
+            <a href="#" class="nav-item"><i class="fas fa-book"></i> Cours</a>
+            <a href="#" class="nav-item"><i class="fas fa-project-diagram"></i> Projets</a>
+            <a href="#" class="nav-item"><i class="fas fa-bell"></i></a>
+            <a href="#" class="nav-item"><i class="fas fa-envelope"></i></a>
+            <a href="#" class="nav-item profile">
+                <img src="https://placehold.co/400" alt="Profile">
+            </a>
+        </div>
+    </nav>
+    <div class="mobile-overlay"></div>
+
+    <main class="container">
+        <!-- Left Sidebar (Same as index.html) -->
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+                <a href="#" class="active"><i class="fas fa-question-circle"></i> Questions</a>
+                <a href="#"><i class="fas fa-tags"></i> Tags</a>
+                <a href="#"><i class="fas fa-users"></i> Utilisateurs</a>
+                <a href="#"><i class="fas fa-book"></i> Cours</a>
+                <a href="#"><i class="fas fa-project-diagram"></i> Projets</a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="content">
+            <div class="ask-container">
+                <h1>Poser une Question</h1>
+                
+                <form class="ask-form">
+                    <div class="form-group">
+                        <label for="title">Titre</label>
+                        <input type="text" id="title" placeholder="Quelle est votre question ? Soyez précis.">
+                        <p class="help-text">Le titre doit être clair et concis.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="body">Description</label>
+                        <textarea id="body" placeholder="Décrivez votre problème en détail. Incluez tout ce qui pourrait aider à comprendre votre question."></textarea>
+                        <div class="editor-toolbar">
+                            <button type="button"><i class="fas fa-bold"></i></button>
+                            <button type="button"><i class="fas fa-italic"></i></button>
+                            <button type="button"><i class="fas fa-link"></i></button>
+                            <button type="button"><i class="fas fa-code"></i></button>
+                            <button type="button"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tags">Tags</label>
+                        <div class="tags-input">
+                            <input type="text" id="tags" placeholder="Ajoutez jusqu'à 5 tags...">
+                            <div class="selected-tags">
+                                <span class="tag">javascript <i class="fas fa-times"></i></span>
+                                <span class="tag">node.js <i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <p class="help-text">Choisissez des tags qui décrivent votre question.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Options</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span>Recevoir des notifications pour les réponses</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Partager sur les réseaux sociaux</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary">Aperçu</button>
+                        <button type="submit" class="btn-primary">Publier la question</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="tips-card">
+                <h3>Conseils pour une bonne question</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Décrivez votre problème en détail</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Incluez le code pertinent</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Expliquez ce que vous avez essayé</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Utilisez des tags appropriés</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="similar-questions">
+                <h3>Questions Similaires</h3>
+                <ul>
+                    <li>
+                        <a href="#">Comment déboguer une erreur JWT ?</a>
+                        <span class="votes">8 votes</span>
+                    </li>
+                    <li>
+                        <a href="#">Meilleures pratiques JWT</a>
+                        <span class="votes">12 votes</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+</body>
+</html> 

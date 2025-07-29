@@ -1,0 +1,62 @@
+<div class="content">
+  <div class="ask-container">
+    <div class="question-detail">
+      <h1>Comment déboguer une erreur JWT ?</h1>
+      <div class="question-meta">
+        <span>posée par <b>Ali</b></span> · <span>il y a 2h</span>
+        <div class="question-tags" style="margin-top:8px;">
+          <span class="tag">jwt</span>
+          <span class="tag">authentification</span>
+          <span class="tag">node.js</span>
+        </div>
+      </div>
+      <div class="question-body" style="margin:16px 0;">
+        <p>J'obtiens une erreur lors de la vérification de mon token JWT. Voici le code utilisé et le message d'erreur retourné. Comment puis-je résoudre ce problème ?</p>
+        <pre style="background:#f8f9f9;padding:12px;border-radius:4px;">const token = req.headers['authorization'];</pre>
+      </div>
+    </div>
+    <div class="answers-section">
+      <h2>2 Réponses</h2>
+      <div class="answer-card">
+        <div class="answer-votes">
+          <span>5</span>
+          <span>votes</span>
+        </div>
+        <div class="answer-main">
+          <div class="answer-body">
+            <p>Assurez-vous que le token envoyé dans l'en-tête est bien formé et que la clé secrète utilisée pour le signer correspond à celle utilisée pour la vérification.</p>
+          </div>
+          <div class="answer-meta">
+            <span>répondu par <b>Sara</b></span> · <span>il y a 1h</span>
+          </div>
+        </div>
+      </div>
+      <div class="answer-card">
+        <div class="answer-votes">
+          <span>2</span>
+          <span>votes</span>
+        </div>
+        <div class="answer-main">
+          <div class="answer-body">
+            <p>Vérifiez également que le token n'a pas expiré et que le format de l'en-tête Authorization est correct : <code>Bearer &lt;token&gt;</code>.</p>
+          </div>
+          <div class="answer-meta">
+            <span>répondu par <b>Yassine</b></span> · <span>il y a 30min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="answer-form-section" style="margin-top:32px;">
+      <h3>Votre réponse</h3>
+      <form class="ask-form">
+        <div class="form-group">
+          <label for="answer">Réponse</label>
+          <textarea id="answer" placeholder="Écrivez votre réponse ici..."></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Publier la réponse</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

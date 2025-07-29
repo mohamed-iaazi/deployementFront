@@ -1,0 +1,29 @@
+
+.navbar .nav-link,
+.navbar .fa {
+  transition: color 0.2s ease;
+}
+
+
+.navbar .nav-link:hover,
+.navbar .fa:hover {
+  color: #391055 !important;
+  font-weight: 500;
+}
+
+.navbar i:hover {
+  color: #391055 !important;
+  cursor: pointer;
+}
+
+
+@media screen  and (max-width: 992px){
+  .navbar .navbar-toggler{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .profile{
+    margin-left: 20%;
+  }
+}
